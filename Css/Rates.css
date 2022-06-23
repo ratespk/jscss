@@ -1,0 +1,315 @@
+/* ============================================================
+     🌐🌐🌐🌐🌐➡➡〰 Startup➡➡〰🌐🌐🌐🌐🌐 
+============================================================  */
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family:century Gothic;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+     🌐🌐🌐🌐🌐➡➡〰 Home Page Background  ➡➡〰🌐🌐🌐🌐🌐 
+============================================================  */
+ body{
+     background-image:url(../Images/hero_bg.jpg); 
+     height: 100vh;
+     background-size: cover; 
+      background-position:center;
+      background-repeat: no-repeat;
+    }
+    
+    /* =============================== Home Page Navigation Bar background============================= */
+ .half_bg{
+     width: 100vw;
+     height: 7rem;
+     background-color: rgba(0,0,0,0.7);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+    
+    
+    /* ====================================!!!!!!!!!Css Variables!!!!!!!================================= */
+    :root{
+        --three_lines-:rgb(190, 190, 16);
+        --sidemenu_bg-:#4c5e04;
+        --drpdown_options_sidenav-bg-:rgb(45, 226, 45);
+        --drpdown_options_sidenav-font-:rgb(0, 0, 0);
+        --sidenav_options_font-:white;
+        --sidenav_options_bg_hover-:rgb(233, 233, 34);
+        --sidenav_options_font_hover-:black;
+        --navigation_options-:rgb(219, 229, 192);
+        --navigation_options_border-:rgb(219, 229, 192);
+        --hover_on_nav_options-:black;
+        --Raleway_font-:font-family: 'Raleway', sans-serif;
+        
+    }
+    
+    /* ============================================================
+    🌐🌐🌐🌐🌐➡➡〰 3 Line Button➡➡〰🌐🌐🌐🌐🌐 
+    ============================================================  */
+    
+    .three-line-menu-a div{
+        
+        border-radius: 5px;
+        background-color:var(--three_lines-);
+        
+        margin: 9px 15px ;
+        
+    }
+
+.three_lines_menu{
+    width: 50px;
+    height: 40px;
+    position: relative;
+    position: fixed;
+    top: 10px;
+    left: 30px;
+}
+
+.three-line-menu-a{
+    position: absolute;
+    justify-content: center;
+    cursor:pointer;
+}
+.three-line-menu{
+    position: relative;
+    right: 8px;
+    top: 0px;   
+}
+
+.line-one{
+    height: 2px;
+    width : 35px;
+}
+.line-two{
+    height: 2px;
+    width : 35px;
+    
+}
+.side-menu{
+    transition: 0.3s;
+    
+}
+.line-three{
+    height: 2px;
+    width : 35px;
+}  
+.nav:hover .side-menu{
+    
+    transform: rotate(180deg);
+    
+}
+
+/* ================================================================================
+🌐🌐🌐🌐🌐➡➡〰 Side Nav Menu ((content,bg and functionality))➡➡〰🌐🌐🌐🌐🌐 
+=================================================================================== */
+
+#visible{
+    display: none;
+    background-color:var(--sidemenu_bg-)
+}
+
+
+.side-menu-bg{
+    width: 200px;
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+
+}
+
+/* ==========================Expand icon css============================== */
+
+.expand_icon{
+    
+    position: absolute;
+    top: 14.5rem;
+    left: 9rem;
+    cursor: pointer;
+    color:var(--drpdown_options_sidenav-font-);
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+
+
+ /* =========================== Side Nav options, Buttons  ========================== */
+ .content-sd-menu .a-btn-menu {
+     margin: 2px 0px;
+     padding:15px 10px;
+     text-align: center;
+     display: grid;
+     transition: 0.3s; 
+     
+    }
+    
+    .content-sd-menu .a-btn-menu{
+        text-decoration: none;
+        color: var(--sidenav_options_font-);
+        font-weight:560;
+        font-family: century Gothic;
+        transition: 0.3s;
+        user-select: none;
+    }
+    
+    
+.content-sd-menu{
+    position:relative;
+    top:60px ;
+    
+}
+
+/* =========================== Side Nav options, Buttons Hover Effect ========================== */
+.a-btn-menu:hover{
+    background-color: var(--sidenav_options_bg_hover-);
+    color: var(--sidenav_options_font_hover-)
+}
+
+.three_lines_menu{
+    transition: 1s;
+}
+
+
+.three-line-menu .whenactive{
+    width: 23px;
+    height: 45px;
+    
+}
+
+.list-buttons-menu{
+    text-decoration: none;
+}
+
+
+/* ================================================================================
+     🌐🌐🌐🌐🌐➡➡〰 navigation Dropdown anchor tags➡➡〰🌐🌐🌐🌐🌐 
+=================================================================================== */
+
+.content-sd-menu .sporthide{
+    text-decoration: none;
+    color: var(--drpdown_options_sidenav-font-);
+    font-weight:560;
+    font-family: century Gothic;
+    transition: 0.3s;
+    user-select: none;
+    margin: 2px 0px;
+    padding:15px 10px;
+    text-align: center;
+    display: none;
+    transition: 0.3s;
+    background-color:var(--drpdown_options_sidenav-bg-)
+    
+}
+
+/* =============== Navigation Dropdown anchor tags Hover======================= */
+.content-sd-menu .sporthide:hover{
+    color: white;
+    text-shadow: 3px 2px 2px black;
+}
+    /* ==============================Navigation Bar for High Resolution======================== */
+
+        .navigation{
+            width: 800px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-a-pc{
+            text-decoration: none;
+            font-size: 17px;
+            padding: 7px 25px;
+            color: var(--navigation_options-) ;
+            /* border: 1px solid var(--navigation_options_border-); */
+            font-weight: bold;
+            border-radius: 3px;
+            font-family:'Raleway', sans-serif;
+            font-style: normal;
+            transition: .6s ease;
+        }
+
+        /* =====================Hover====================== */
+        .nav-a-pc:hover{
+
+            font-weight: 900;
+            background-color: var(--navigation_options-);
+            color: var(--hover_on_nav_options-);
+            
+        }
+                /* Our Logo for all devices */
+    .logo_img{
+        width: 80px;
+        margin-left: -260px;
+        position: relative;
+       
+        
+    }
+    /* Logo div  */
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .nav_bg{
+        position: fixed;
+    }
+
+        /* ====================== M e d i a | Q u e r i e s ================================== */
+
+@media (min-width:999px){
+        .nav_bar{
+            display: none;
+           
+        }
+        .logo_mob{
+            display: none;
+        }
+       
+    }
+    @media (max-width:998px){
+ .nav_bg{
+            margin-top: 70px;
+        }
+        .line-one{
+            height: 2px;
+            width : 20px;
+        }
+        .line-two{
+            height: 2px;
+            width : 20px;
+        }
+        .line-three{
+            height: 2px;
+            width : 20px;
+        }
+        .three-line-menu-a div{
+            border-radius: 5px;
+            background-color:var(--three_lines-);
+            margin: 3px 5px ;
+        }
+        .logo_img_mob{
+           position: relative;
+           width: 30px;
+        }
+        .logo_mob{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 35px;
+            margin-left: 70px;
+        }
+    }
